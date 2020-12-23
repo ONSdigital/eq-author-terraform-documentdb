@@ -1,5 +1,5 @@
 resource "aws_security_group" "database_access" {
-  name        = "${var.documentdb_security_group_name}"
+  name        = "${var.env}-${var.documentdb_security_group_name}"
   description = "Database access from the application subnet"
   vpc_id      = "${var.vpc_id}"
 
